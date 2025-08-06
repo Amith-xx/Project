@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>IRCTC Clone - Register</title>
+  <link href="register.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo-section">
+        <button class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <h1>IRCTC</h1>
+      </div>
+      <div class="notification-section">
+        <button class="notification-btn" id="notificationBtn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" fill="white"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Side Menu -->
+  <div class="side-menu" id="sideMenu">
+    <div class="menu-item">
+      <div class="menu-main" data-menu="trains">
+        TRAINS <span class="arrow">▼</span>
+      </div>
+      <div class="submenu" id="trains-submenu">
+        <a href="#" class="submenu-item">Book Now</a>
+        <a href="#" class="submenu-item">PNR Enquiry</a>
+        <a href="#" class="submenu-item">Train Schedule</a>
+      </div>
+    </div>
+    
+    <div class="menu-item">
+      <a href="#" class="menu-main">BUSES</a>
+    </div>
+    
+    <div class="menu-item">
+      <div class="menu-main" data-menu="meals">
+        MEALS <span class="arrow">▼</span>
+      </div>
+      <div class="submenu" id="meals-submenu">
+        <a href="#" class="submenu-item">Book Food</a>
+        <a href="#" class="submenu-item">Order Food</a>
+        <a href="#" class="submenu-item">Food Menu</a>
+      </div>
+    </div>
+    
+    <div class="menu-item">
+      <a href="#" class="menu-main">CONTACT US</a>
+    </div>
+  </div>
+
+  <!-- Menu Overlay -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <main class="main-content">
+    <div class="form-container">
+      <h2>Create Your IRCTC account</h2>
+      <div class="signin-link">
+        <a href="index.html" class="link">SIGN IN</a>
+      </div>
+      
+      <form id="registerForm" class="register-form">
+        <div class="input-group">
+          <input type="text" id="username" name="username" placeholder="Username" required>
+          <div class="error-message" id="username-error"></div>
+        </div>
+        
+        <div class="input-group">
+          <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
+          <div class="error-message" id="fullname-error"></div>
+        </div>
+        
+        <div class="input-group">
+          <input type="password" id="password" name="password" placeholder="Password" required>
+          <div class="error-message" id="password-error"></div>
+          <div class="password-strength" id="password-strength"></div>
+        </div>
+        
+        <div class="input-group">
+          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+          <div class="error-message" id="confirm-password-error"></div>
+        </div>
+        
+        <div class="input-group">
+          <input type="email" id="email" name="email" placeholder="Email" required>
+          <div class="error-message" id="email-error"></div>
+        </div>
+        
+        <div class="input-group">
+          <div class="mobile-container">
+            <select id="countryCode" name="countryCode" class="country-select" required>
+              <option value="+91">+91 - India</option>
+              <option value="+1">+1 - USA/Canada</option>
+              <option value="+44">+44 - UK</option>
+              <option value="+33">+33 - France</option>
+              <option value="+49">+49 - Germany</option>
+              <option value="+81">+81 - Japan</option>
+              <option value="+86">+86 - China</option>
+              <option value="+61">+61 - Australia</option>
+              <option value="+55">+55 - Brazil</option>
+              <option value="+7">+7 - Russia</option>
+            </select>
+            <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" required>
+          </div>
+          <div class="mobile-info">Please submit Mobile Number without ISD Code</div>
+          <div class="error-message" id="mobile-error"></div>
+        </div>
+        
+        <button type="submit" class="register-btn">Create Account</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 IRCTC Clone - Student Project</p>
+  </footer>
+
+  <script src="register.js"></script>
+</body>
+
+</html>
